@@ -43,20 +43,6 @@ if (!$resultado) {
     die("Error en la consulta: " . mysqli_error($conexion));
 }
 
-echo "<table class='table table-striped table-responsive'>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Direccion</th>
-          <th>Telefono Fijo</th>
-          <th>Telefono Movil</th>
-          <th>Correo Electronico</th>
-          <th>Distrito</th>
-        </tr>
-      </thead>
-      <tbody>";
-
 while ($fila = mysqli_fetch_object($resultado)) {
     echo "<tr>
             <td>" . $fila->nombre . "</td>
